@@ -1,6 +1,12 @@
-const HomePage = (props) => {
-  console.log("props => ", props.products);
-  return <h1></h1>;
+const HomePage = ({ products }) => {
+  const { list } = products;
+  return (
+    <div>
+      {list.map((list) => {
+        return <p>{list.name}</p>;
+      })}
+    </div>
+  );
 };
 
 export async function getStaticProps() {
