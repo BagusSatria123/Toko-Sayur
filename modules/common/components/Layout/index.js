@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 
-import Mobileheader from "../../../mobile/components/Header";
+import MobileHeader from "@mobile/components/Header";
 
 const useStyles = makeStyles({
   content: {
@@ -12,17 +12,16 @@ const useStyles = makeStyles({
 
 const Layout = ({ children }) => {
   const classes = useStyles();
-
   return (
     <React.Fragment>
-      <Mobileheader />
+      <MobileHeader />
       <div className={classes.content}>{children}</div>
     </React.Fragment>
   );
 };
 
-Layout.PropTypes = {
-  children: PropTypes.OneOfTypes([
+Layout.propTypes = {
+  children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
