@@ -19,6 +19,8 @@ import { currencyFormatter } from "@utils/currency";
 
 import PromoCard from "@common/components/PromoCard";
 
+import Productinfopanel from "@common/components/ProductinfoPanel";
+
 const useStyles = makeStyles((theme) => ({
   container: {
     marginBottom: theme.spacing(8),
@@ -169,6 +171,7 @@ const ProductDetailCard = ({
         </Collapse>
       </Card>
       <PromoCard promo={promo} />
+      <Productinfopanel />
     </div>
   );
 };
