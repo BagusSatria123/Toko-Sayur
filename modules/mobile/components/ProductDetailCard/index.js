@@ -17,6 +17,8 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ProductRating from "@common/components/ProductRating";
 import { currencyFormatter } from "@utils/currency";
 
+import PromoCard from "@common/components/PromoCard";
+
 const useStyles = makeStyles((theme) => ({
   container: {
     marginBottom: theme.spacing(8),
@@ -166,6 +168,7 @@ const ProductDetailCard = ({
           </CardContent>
         </Collapse>
       </Card>
+      <PromoCard promo={promo} />
     </div>
   );
 };
